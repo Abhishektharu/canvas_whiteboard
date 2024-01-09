@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mousemove Event Example</title>
+  <style>
+    #mousemoveExample {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+    }
+  </style>
+</head>
+<body>
+
+<div id="mousemoveExample">Move your mouse over me!</div>
+
+<script>
+  const mousemoveExample = document.getElementById('mousemoveExample');
+
+  mousemoveExample.addEventListener('mousemove', function(event) {
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
+
+    // Update the content of the element with mouse coordinates
+    mousemoveExample.innerHTML = `Mouse Coordinates: (${mouseX}, ${mouseY})`;
+
+    // Change background color based on mouse position
+    const hue = (mouseX / window.innerWidth) * 360; // Map X coordinate to hue value
+    mousemoveExample.style.backgroundColor = `hsl(${hue}, 70%, 80%)`;
+  });
+</script>
+
+</body>
+</html>

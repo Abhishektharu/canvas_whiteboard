@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Canvas with Buttons</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <canvas id="whiteboard"></canvas>
-    <style src="script.js"></style>
+    <div class="buttons">
+        <button id="clear-btn">clear</button>
+        <button id="default-btn">default</button>
+        <button id="red-btn">red</button>
+        <button id="yellow-btn">yellow</button>
+        <button id="blue-btn">blue</button>
+        <button id="green-btn">green</button>
+        <input id="picker-btn" type="color" />
+    </div>
+    
+
+    <canvas id="whiteboard" ></canvas>
+    
+    <script src="script.js"></script>
 </body>
 </html>
